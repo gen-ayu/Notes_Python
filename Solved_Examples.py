@@ -13,3 +13,4 @@ Identifiers and keywords
 Variables and assignment (including chained assignment)
 Data types: int, float, str, bool, list, tuple, dict, set
 Operators: arithmetic, comparison, logical, assignment, bitwise, identity, membership '''
+#giving some miscellaneous examples related to the above topics:
