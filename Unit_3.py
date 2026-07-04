@@ -105,4 +105,29 @@ factorial(5)
 = 5 × 4 × 3 × 2 × 1
 = 120
 '''
+
+# Since we know what a function is, we can also move on to modules and packages in Python. A module is a file containing Python code that can define functions, classes, and variables. A package is a collection of modules that are organized in a directory hierarchy. Modules and packages allow you to organize your code into reusable components, making it easier to manage and maintain.
+# Example of such functions are math, pytorch, numpy, pandas, etc. These are called modules and packages in python. We will cover them in the next unit.
+
+# We will discuss one such modules here that is the math module. The math module provides a wide range of mathematical functions and constants. Some of the commonly used functions in the math module include:
+# 1. math.sqrt(x): Returns the square root of x.
+# 2. math.pow(x, y): Returns x raised to the power of y.
+# 3. math.sin(x): Returns the sine of x (x is in radians).
+# 4. math.cos(x): Returns the cosine of x (x is in radians).
+# 5. math.tan(x): Returns the tangent of x (x is in radians
+# 6. math.log(x, base): Returns the logarithm of x to the specified base.
+# 7. math.exp(x): Returns e raised to the power of x.
+# 8. math.pi: Returns the value of pi (3.14159...).
+# 9. math.e: Returns the value of e (2.71828...).
+# 10. math.factorial(x): Returns the factorial of x (x must be a non-negative integer).
+# https://docs.python.org/3/library/math.html this is the link to the official documentation of the math module in python. You can refer to this for more information on the math module and its functions.
+# Now I will show you an example of how to use the math module in Python. Let's say we want to calculate the square root of a number. We can do this using the math.sqrt() function as follows:
+'''
+import math 
+x = 16
+result = math.sqrt(x)
+print(result) # Output: 4.0
+'''
+# Like the above example, we can import the math library and use its functions to perform various mathematical oprations. This is just a samll part of what a math module can do feel free to explore the documentation.
+
 # Now with this we have covered the basics of functions, arguments, local and global variables, and recursion. In the next unit, we will learn about modules and packages in Python.
