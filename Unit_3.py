@@ -120,6 +120,11 @@ factorial(5)
 # 8. math.pi: Returns the value of pi (3.14159...).
 # 9. math.e: Returns the value of e (2.71828...).
 # 10. math.factorial(x): Returns the factorial of x (x must be a non-negative integer).
+# 11. math.ceil(x): Returns the smallest integer greater than or equal to x.
+# 12. math.floor(x): Returns the largest integer less than or equal to x.
+# 13. math.fabs(x): Returns the absolute value of x.
+# 14. math.gcd(x, y): Returns the greatest common divisor of x and y.
+# 15. math.random(): Returns a random float number between 0.0 and 1.0.
 # https://docs.python.org/3/library/math.html this is the link to the official documentation of the math module in python. You can refer to this for more information on the math module and its functions.
 # Now I will show you an example of how to use the math module in Python. Let's say we want to calculate the square root of a number. We can do this using the math.sqrt() function as follows:
 '''
