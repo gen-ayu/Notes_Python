@@ -143,5 +143,195 @@ print(newlist)
 # Condition is like a filter that only accepts the items that valuate to True. For example:
 newlist = [x for x in fruits if x != "apple"]
 # if The condition if x != "apple"  will return True for all elements other than "apple", making the new list contain all fruits except "apple".
-# The condition can also be omitted, in that case the new list will contain all the items from the original list. For example:
+# The condition can also be
+# omitted, in that case the new list will contain all the items from the original list. For example:
 newlist = [x for x in fruits]
+
+# Sorting of a list can be done by using the sort() method. The sort() method takes no arguments and sorts the items in the list in ascending order by default. For example:
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist) # Output: ['banana', 'kiwi', 'mango', 'orange', 'pineapple'], i.e. sorting the items in the list in ascending order.
+# The sort() method can also take a reverse argument which is a boolean value. If the reverse argument is set to True, the items in the list will be sorted in descending order. For example:
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort(reverse = True)
+print(thislist) # Output: ['pineapple', 'orange', 'mango', 'kiwi', 'banana'], i.e. sorting the items in the list in descending order.
+#Custom sorting can be done by using the key argument of the sort() method. The key argument takes a function as an argument and sorts the items in the list based on the return value of the function. For example:
+def myfunc(n):
+  return abs(n - 50)
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)
+print(thislist) # Output: [50, 65, 82, 23, 100], i.e. sorting the items in the list based on their distance from 50.
+# The sort() method is case sensitive, which means that it will sort the items in the list based on their ASCII values. For example:
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort()
+print(thislist) # Output: ['Kiwi', 'Orange', 'banana', 'cherry'], i.e. sorting the items in the list based on their ASCII values.
+# Producing reverse of a list can be done by using the reverse() method. The reverse() method takes no arguments and reverses the order of the items in the list. For example:
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.reverse()
+print(thislist) # Output: ['cherry', 'Kiwi', 'Orange', 'banana'], i.e. reversing the order of the items in the list.
+
+
+# Coping of a list can be done by using the copy() method. The copy() method takes no arguments and returns a shallow copy of the list. For example:
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist) # Output: ['apple', 'banana', 'cherry'], i.e. creating a shallow copy of the list.
+# A shallow copy means that the new list is a new object but the items in the new list are references to the same objects as the items in the original list. This means that if we modify an item in the new list, it will also modify the item in the original list.
+# Creating a copy using list method can also be done by using the list() method.
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist) # Output: ['apple', 'banana', 'cherry'], i.e. creating a shallow copy of the list using the list() method.
+# Using the slice Operator to create a copy of a list can also be done by using the slice operator. The slice operator takes two arguments, the start index and the end index, and returns a new list containing the items from the start index to the end index. For example:
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist[:]
+print(mylist) # Output: ['apple', 'banana', 'cherry'], i.e. creating a shallow copy of the list using the slice operator.
+
+# Joining two lists can be done by using the + operator. The + operator takes two lists as arguments and returns a new list containing the items from both lists. For example:
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+list3 = list1 + list2
+print(list3) # Output: ['a', 'b', 'c', 1, 2, 3], i.e. joining the two lists into a new list.
+# We can also use the extend() method to join two lists. The extend() methods takes one list as an arguments and adds the items from that list to the end of the original list. For example:
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+list1.extend(list2)
+print(list1) # Output: ['a', 'b', 'c', 1, 2, 3], i.e. adding the items from list2 to the end of list1.
+# One more way to join two lists is by using the append() method in a loop. The append() method takes one item as an argument and adds that item to the end of the list. For example:
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+for item in list2:
+    list1.append(item)
+print(list1) # Output: ['a', 'b', 'c', 1, 2, 3], i.e. adding the items from list2 to the end of list1 using a loop and the append() method.
+
+# To end all the list methods we discussed are as follows:
+'''
+append()	Adds an element at the end of the list
+clear()	Removes all the elements from the list
+copy()	Returns a copy of the list
+count()	Returns the number of elements with the specified value
+extend()	Add the elements of a list (or any iterable), to the end of the current list
+index()	Returns the index of the first element with the specified value
+insert()	Adds an element at the specified position
+pop()	Removes the element at the specified position
+remove()	Removes the item with the specified value
+reverse()	Reverses the order of the list
+sort()	Sorts the list'''
+
+#----------------------------------------------TUPLES---------------------------------------------
+
+# Tuple is one of the four built-in data types in Python used to store collections of data, the other three are List, Set, and Dictionary, all with different qualities and usage. A tuple is a collection which is ordered and unchangeable. Tuples are written with round brackets.
+# A tuple is a collection which is ordered and unchangeable. Example of a tuple is given below:
+this_tuple = ("apple", "banana", "cherry")
+print(this_tuple) # Output: ('apple', 'banana', 'cherry'), i.e. creating a tuple with three items.
+# Tuples are ordered, which means that the items have a defined order, and that order will not change. Unchangeable/immutable means that we cannot change, add or remove items after the tuple has been created. Tuples are written with round brackets, and the items are separated by commas.
+# Indexong in tuple starts from 0. When we say that tuple are ordered, it means that the items have a defined order, and that order will not change. Though it allows duplicate values, it is not possible to change the value of a tuple item, but we can create a new tuple with the desired values. For examples:
+this_tuple = ("apple", "banana", "cherry", "apple", "cherry")
+print(this_tuple)
+# Tuple lenght can be found by using the len() function. For example:
+this_tuple = ("apple", "banana", "cherry")
+print(len(this_tuple)) # Output: 3, i.e. finding the length of the tuple.
+# Tuple can also be of any data type and can also contain different data types in a single tuple. For example:
+mixed_tuple = (1, "apple", 3.14, True, [1, 2, 3], {"name": "Ayush", "age": 19})
+# Type of tuple can be found by using the type() function. For example:
+print(type(mixed_tuple)) # Output: <class 'tuple'>, i.e. finding the type of the tuple.
+# Tuple can also be created without using parentheses, but it is not recommended. For example:
+t = 1, 2, 3
+print(t) # Output: (1, 2, 3), i.e. creating a tuple without using parentheses. The Comma is the key to defining a tuple, not the parentheses.
+# Tuple constructor can also be used to create a tuple. The tuple() constructor takes an iterable as an argument and returns a tuple containing the items from that iterable. For example:
+this_tuple = tuple(("apple", "banana", "cherry")) # note the double round brackets, the outer brackets are for the tuple() constructor, and the inner brackets are for the iterable (in this case a list).
+print(this_tuple) # Output: ('apple', 'banana', 'cherry'), i.e. creating a tuple using the tuple() constructor.
+
+# Accessing the items of a tuple can be done by using the index of the item. The index of the first item in a tuple is 0, the index of the second item is 1, and so on. We can also use negative indexing to access the items from the end of the tuple. The index of the last item in a tuple is -1, the index of the second last item is -2, and so on. For example:
+this_tuple = ("apple", "banana", "cherry")
+print(this_tuple[1]) # Output: banana, i.e. accessing the item at index 1 of the tuple.
+print(this_tuple[-1]) # Output: cherry, i.e. accessing the item at index -1 of the tuple.
+print(this_tuple[2:3]) # Output: ('cherry',), i.e. accessing the items from index 2 to 3 of the tuple. Note that the end index is exclusive, so it will not include the item at index 3.
+
+# Checking if the item exists in a tuple can be done by using the in keyword. The in keyword returns True if the item exists in the tuple, and False if it does not. For example:
+this_tuple = ("apple", "banana", "cherry")
+if "apple" in this_tuple:
+    print("Yes, 'apple' is in the tuple") # Output: Yes, 'apple' is in the tuple, i.e. checking if the item exists in the tuple.
+# I said earlier that tuples are unchangeable, which means that we cannot change, add or remove items after the tuple has been created. But we can convert the tuple into a list, change the list, and convert the list back into a tuple. For example:
+this_tuple = ("apple", "banana", "cherry")
+that_tuple = list(this_tuple)
+that_tuple[1] = "kiwi"
+this_tuple = tuple(that_tuple)
+print(this_tuple) # Output: ('apple', 'kiwi', 'cherry'), i.e. changing the item at index 1 of the tuple by converting it into a list, changing the list, and converting it back into a tuple.
+
+# Adding items to a tuple can be done by converting the tuple into a list, adding the item to the list, and converting the list back into a tuple. For example:
+this_tuple = ("apple", "banana", "cherry")
+that_tuple = list(this_tuple)
+that_tuple.append("kiwi")
+this_tuple = tuple(that_tuple)
+print(this_tuple) # Output: ('apple', 'banana', 'cherry', 'kiwi'), i.e. adding an item to the tuple by converting it into a list, adding the item to the list, and converting it back into a tuple.
+# You can add tuple to a tuple by using the + operator. The + operator takes two tuples as arguments and returns a new tuple containing the items from both tuples. For example:
+tuple1 = ("a", "b", "c")
+tuple2 = (1, 2, 3)
+tuple3 = tuple1 + tuple2
+print(tuple3) # Output: ('a', 'b', 'c', 1, 2, 3), i.e. adding two tuples together to create a new tuple.
+
+# Removing items from a tuple can be done by converting the tuple into a list, removing the item from the list, and converting the list back into a tuple. For example:
+this_tuple = ("apple", "banana", "cherry")
+that_tuple = list(this_tuple)
+that_tuple.remove("banana")
+this_tuple = tuple(that_tuple)
+# or delete the entire tuple by using the del keyword. For example:
+this_tuple = ("apple", "banana", "cherry")
+del this_tuple
+print(this_tuple) # Output: NameError: name 'this_tuple' is not defined, i.e. deleting the entire tuple by using the del keyword.
+
+# Unpacking a tuple can be done by using the unpacking operator *. The unpacking operator * takes a tuple as an argument and returns the items in the tuple as separate values. For example:
+this_tuple = ("apple", "banana", "cherry") # This is packing
+(a, b, c) = this_tuple # This is unpacking
+print(a) # Output: apple, i.e. unpacking the tuple into separate values.
+# Using * asterik
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+(green, yellow, *red) = fruits
+print(green) # Output will be apple
+print(yellow) # Output will be banana
+print(red) # Output will be ['cherry', 'straberry', 'raspberry']
+
+# Looping in a tuple : 3 ways
+# Looping through a tuple
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+  print(x)
+  
+# looping through the index numbers
+thistuple = ("apple", "banana", "cherry")
+for i in range(len(thistuple)):
+  print(thistuple[i])
+# Using while loop
+thistuple = ("apple", "banana", "cherry")
+i = 0
+while i < len(thistuple):
+  print(thistuple[i])
+  i = i + 1
+  
+# Joining tuples using + Operator
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3) # Output: ('a', 'b', 'c', 1, 2, 3)
+
+# Multiplying tuple
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+
+print(mytuple) # Output: ('apple', 'banana', 'cherry', 'apple', 'banana', 'cherry')
+
+# Methods of a tuple that can be used on tuple 
+# count() - Returns the number of times a specific values has occured in a tuple. 
+tuple_name.count(value) # Syntax
+fruits = ("apple", "banana", "apple", "cherry", "apple")
+
+print(fruits.count("apple")) # Output: 3
+print(fruits.count("banana")) # Output: 1
+print(fruits.count("mango")) # Output: 0
+# index() - Searches the tuple for a specified value and returns the position of where it was found
+tuple_name.index(value) # Syntax
+fruits = ("apple", "banana", "apple", "cherry", "apple")
+
+print(fruits.index("banana")) # Output: 1
+print(fruits.index("apple")) # Output: 0
+print(fruits.index("cherry")) # Output: 2
